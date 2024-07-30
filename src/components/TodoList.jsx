@@ -1,14 +1,13 @@
 import "./TodoList.css";
 import TodoItem from "./TodoItem.jsx";
 
-const TodoList = () => {
+const TodoList = ({ todos, onUpdate, onDelete }) => {
     return (
         <div className="TodoList">
             <div className="Todo">
-                <TodoItem/>
-                <TodoItem/>
-                <TodoItem/>
-                <TodoItem/>
+                {todos.map((todo) => {
+                    return <TodoItem key={todo.id} {...todo} onUpdate={onUpdate} onDelete={onDelete}/>;
+                })}
             </div>
         </div>
     );

@@ -1,11 +1,19 @@
 import "./TodoItem.css";
 
-const TodoItem = () => {
+const TodoItem = ({ id, isDone, content, onUpdate, onDelete }) => {
+    const onChangeCheckBox = () => {
+        onUpdate(id);
+    };
+
+    const onDeleteTodo = () => {
+        onDelete(id);
+    };
+
     return (
         <div className="TodoItem">
-            <input type="checkbox"/>
-            <div className="NotDone">content</div>
-            <button>삭제</button>
+            <input checked={isDone} onChange={onChangeCheckBox} type="checkbox"/>
+            <div className={isDone ? 'Done' : 'NotDone'}>{content}</div>
+            <button onClick={onDeleteTodo}>삭제</button>
         </div>
     );
 };
