@@ -1,8 +1,15 @@
 import './App.css'
+import TodoInput from "./components/TodoInput.jsx";
+import TodoItem from "./components/TodoItem.jsx";
+import TodoList from "./components/TodoList.jsx";
 
 function App() {
     return (
-        <>App</>
+        <div>
+            <TodoInput/>
+            <TodoList/>
+            <TodoItem/>
+        </div>
     );
 }
 
