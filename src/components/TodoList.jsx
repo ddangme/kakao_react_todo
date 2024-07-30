@@ -1,9 +1,15 @@
 import "./TodoList.css";
+import TodoItem from "./TodoItem.jsx";
 
 const TodoList = () => {
     return (
-        <div>
-            TodoList
+        <div className="TodoList">
+            <div className="Todo">
+                <TodoItem/>
+                <TodoItem/>
+                <TodoItem/>
+                <TodoItem/>
+            </div>
         </div>
     );
 };
