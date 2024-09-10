@@ -1,8 +1,7 @@
 import './App.css'
 
-import { useRef, useState, useReducer } from "react";
+import { useRef, useReducer } from "react";
 import TodoInput from "./components/TodoInput.jsx";
-import TodoItem from "./components/TodoItem.jsx";
 import TodoList from "./components/TodoList.jsx";
 
 
